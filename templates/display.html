@@ -1,0 +1,66 @@
+<html>
+  <head>
+
+    <title>about your location</title>
+    
+    <style>
+      
+        body{
+            background-color: black;
+            color:white;
+        }
+        .mainheading{
+            color: rgb(41, 222, 62);
+            font-size: xx-large;
+            border: 2px solid rgb(41, 222, 62);;
+            margin: 20px 30% 10px 30% ;
+            border-radius: 20px;
+        }
+        .mainheading:hover{
+            {% comment %} color:blue; {% endcomment %}
+            font-size: xx-large;
+            border: 2px solid rgb(41, 222, 62);;
+            margin: 20px 30% 10px 30% ;
+            border-radius: 20px;
+        }
+        .soilcontent{
+            border: 2px solid blue;
+            margin: 20px 30% 10px 30%;
+            border-radius: 10px;
+            background-color: lightblue;
+            color:black;
+            font-size:larger;
+        }
+
+    </style>
+
+    <script>
+
+    </script>
+  
+  </head>
+  <body>
+    <center>
+
+        <h2 class="mainheading">All About Your Location</h2>
+
+    <div class="soilcontent">
+        <h3> State - {{x.state}} </h3>
+        <h3> District - {{x.district}} </h3>
+        <h3> Month - {{x.month}} </h3>
+        <h3> Nitrogen Content  - {{x.n_val}} </h3>
+        <h3> Pottasium Content  - {{x.k_val}} </h3>
+        <h3> Phosporous Content - {{x.p_val}} </h3>
+        <h3> pH Value - {{x.ph_val}} </h3>
+        <h3> Humidity - {{x.humidity}} </h3>
+        <h3> Temperature - {{x.temperature}} </h3>
+        <h3> Precipitation - {{x.precip}} </h3>
+        <h2> Suggested Crops for your  Area: </h2>
+        {%for i in y%}
+        <h3>{{i}}</h3>
+        {%endfor%}
+    </div>
+    
+</center>
+  </body>
+</html>
