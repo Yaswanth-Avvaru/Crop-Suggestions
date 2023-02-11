@@ -37,7 +37,7 @@ def my_view(request):
     one_set = [state,district,month,  int(n_val),int(p_val),int(k_val),float(ph_val),float(humidity),float(temperature),float(precip)]
     two_set = [state,district,month,  int(n_val),int(p_val),int(k_val),float(ph_val)-0.3,float(humidity)-2,float(temperature)-2,float(precip)-12]
     third_set = [state,district,month,int(n_val),int(p_val),int(k_val),float(ph_val)+0.3,float(humidity)+2,float(temperature)+2,float(precip)+12]
-    file = open('./modelfile.pkl','rb')
+    file = open('/sastra-lwc/webone/modelfile.pkl','rb')
     model = pickle.load(file)
     dictionary_1 = {
     'N':[one_set[3]],
