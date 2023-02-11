@@ -264,7 +264,7 @@
       //call 6 dates to get average weather data------------------------------
 		  dates_arr = getDates(month);
       for ( let i = 0 ; i < dates_arr.length; i++){
-        fetchDataFromAPI("c69787f7c89c44c89b641547231102", `http://api.weatherapi.com/v1/future.json?key=c69787f7c89c44c89b641547231102&q=${district},${state},india&dt=${dates_arr[i]}`);
+        fetchDataFromAPI("9fb0ebaa2eee423fb35151624231102", `http://api.weatherapi.com/v1/future.json?key=9fb0ebaa2eee423fb35151624231102&q=${district},${state},india&dt=${dates_arr[i]}`);
       }
       setTimeout(() => {
         console.log("averages : ", tot_hum_two_months,tot_temp_two_months,tot_precip_two_months);
