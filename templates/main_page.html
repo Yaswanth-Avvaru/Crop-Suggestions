@@ -211,6 +211,27 @@
         const k = parseInt(document.querySelector("#k_val").value);
         const ph = parseInt(document.querySelector("#ph_val").value);
         
+        if (ph < 1 || ph > 14) {
+          alert("Input ph must be a number between 1 and 14");
+          return false;
+        }
+
+        if (n < 0 ) {
+          alert("nitrogen must be greater than 0");
+
+        }
+
+        if (p < 0) {
+          alert("phosporous must be greater than 0");
+          return false;
+        }
+
+        if (k<0) {
+          alert("pottasium must be greater than 0");
+          return false;
+        }
+
+
         console.log(`The values of n, p,k and ph are: ${n}, ${p},${k} and ${ph}.`);
         console.log("State: " + state);
         console.log("District: " + district);
@@ -328,18 +349,18 @@
 			<option value="12">December</option>
 		</select>
     <br>
-    <p style="color:black; font-weight:bold; font-size:larger;">Enter N Value</p>
+    <p style="color:black; font-weight:bold; font-size:larger;">Enter Nitrogen Value</p>
     <input type="text" id="n_val" >
-    <p style="color:black; font-weight:bold; font-size:larger">Enter P Value</p>
+    <p style="color:black; font-weight:bold; font-size:larger">Enter Phosphorous Value</p>
     <input type="text" id="p_val" >
-    <p style="color:black; font-weight:bold; font-size:larger">Enter K Value</p>
+    <p style="color:black; font-weight:bold; font-size:larger">Enter Potassium Value</p>
     <input type="text" id="k_val" >
     <p style="color:black; font-weight:bold; font-size:larger">Enter pH Value</p>
     <input type="text" id="ph_val" >
     <br>
     <br>
   </div>
-  <input class="findbtn" type="submit" value="Know Your City" onclick="submitForm()">
+  <input class="findbtn" type="submit" value="Know Your Crop" onclick="submitForm()">
 
   </center>
 

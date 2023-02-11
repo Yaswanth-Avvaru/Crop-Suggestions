@@ -38,6 +38,7 @@ def my_view(request):
     two_set = [state,district,month,  int(n_val),int(p_val),int(k_val),float(ph_val)-0.3,float(humidity)-2,float(temperature)-2,float(precip)-12]
     third_set = [state,district,month,int(n_val),int(p_val),int(k_val),float(ph_val)+0.3,float(humidity)+2,float(temperature)+2,float(precip)+12]
     file = open('/home/ubuntu/sastra-lwc/webone/modelfile.pkl','rb')
+    # file = open(r'C:\Users\dksr1\OneDrive\Desktop\sastra-lwc\webone\modelfile.pkl','rb')
     model = pickle.load(file)
     dictionary_1 = {
     'N':[one_set[3]],
@@ -139,5 +140,5 @@ def my_view(request):
     for i in range(len(crops_suggested)):
         new_x[i] = crops_suggested[i]
     file.close()
-    print("data from server",state,district,month,n_val,p_val,k_val,ph_val,humidity,temperature,precip)
+    
     return render(request, 'display.html',{'x':value_data,'y':crops_suggested})
