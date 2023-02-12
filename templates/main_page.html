@@ -209,7 +209,7 @@
         const n = parseInt(document.querySelector("#n_val").value);
         const p = parseInt(document.querySelector("#p_val").value);
         const k = parseInt(document.querySelector("#k_val").value);
-        const ph = parseInt(document.querySelector("#ph_val").value);
+        const ph = parseFloat(document.querySelector("#ph_val").value);
         
         if (ph < 1 || ph > 14) {
           alert("Input ph must be a number between 1 and 14");

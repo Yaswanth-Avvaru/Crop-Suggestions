@@ -32,7 +32,7 @@ def my_view(request):
     text_data = text_data.split("|")
     state,district,month,n_val,p_val,k_val,ph_val,humidity,temperature,precip = text_data[:]
     value_data = {
-        "state":state,"district":district,"month":month,"n_val":int(n_val),"p_val":int(p_val),"k_val":int(k_val),"ph_val":round(float(ph_val),2),"humidity":round(float(humidity),2),"temperature":round(float(temperature),2),"precip":round(float(precip),2)
+        "state":state,"district":district,"month":month,"n_val":int(n_val),"p_val":int(p_val),"k_val":int(k_val),"ph_val":float(ph_val),"humidity":round(float(humidity),2),"temperature":round(float(temperature),2),"precip":round(float(precip),2)
     }
     one_set = [state,district,month,  int(n_val),int(p_val),int(k_val),float(ph_val),float(humidity),float(temperature),float(precip)]
     two_set = [state,district,month,  int(n_val),int(p_val),int(k_val),float(ph_val)-0.3,float(humidity)-2,float(temperature)-2,float(precip)-12]
@@ -133,7 +133,7 @@ def my_view(request):
     # print(crops[ans_7[0]])
     crops_suggested = []
     crops_had = [crops[ans_1[0]],crops[ans_2[0]],crops[ans_3[0]],crops[ans_4[0]],crops[ans_5[0]],crops[ans_6[0]],crops[ans_7[0]]]
-    for i in crops_had:
+    for i in crops_had:                                       
         if i  not in crops_suggested:
             crops_suggested.append(i)
     new_x = {}
